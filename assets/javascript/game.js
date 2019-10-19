@@ -1,17 +1,17 @@
 var winCount = 0;
 var lossCount = 0;
+var guessesLeft = 9;
 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var lettersGuessed = [];
-var guessesLeft = 9;
+
+// generate random item from computerChoice array
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
 // when the user presses a key, store the key
 document.onkeyup = function (event) {
-    var userGuess = event.key; 
+    var userGuess = event.key;
 
-    // and generate random item from computerChoice array 
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; 
-
-    // compare the user's letter and the computer's letter 
+    // then compare the user's letter and the computer's letter
     // [3 scenarios - if, else if, else]
 
     // [if] if the userGuess doesn't match the computer guess
@@ -19,34 +19,53 @@ document.onkeyup = function (event) {
         // decrease guesses left by 1
         guessesLeft--;
         // add userGuess to the lettersguessed array
-        // lettersGuessed = (lettersGuessed + userGuess);
         lettersGuessed.push(userGuess);
 
-        // test and debug
-        console.log (userGuess);
-        console.log (computerGuess);
-        console.log(guessesLeft);
-        console.log(lettersGuessed);
+            // test and debug
+            console.log("my guess = " + userGuess);
+            console.log("computer guess = " + computerGuess);
+            console.log("guesses left = " + guessesLeft);
+            console.log("letters guessed: " + lettersGuessed);
+            console.log("--------------------");
 
-            // [if] if the guessesLeft = 0
-            // if (guessesLeft == 0) {
-            // increase lossCount by 1
-            // lossCount++;
-            // reset guessLeft
-            // 
-            // reset lettersGuessed array
-            // 
-            //}
-    } 
-    // [else if] if the userGuess is already in the array 
-    
-    //     nothing happens 
+        // [if] if the guessesLeft = 0
+        if (guessesLeft == 0) {
+        // increase lossCount by 1
+        lossCount++;
+        // reset guessLeft
+        guessesLeft = 9;
+        // reset lettersGuessed array
+        lettersGuessed = [];
+        // generate new random letter
+        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-    // [else] if the user's letter DOES match the computers letter 
-    //     increase winCount by 1 
-    //     winCount++;
-    //     reset guessesLeft
-        
-    //     reset lettersGuessed array
-    // 
+                // test and debug
+                console.log("WINS - " + winCount);
+                console.log("LOSS - " + lossCount);
+                console.log("new computer letter = " + computerGuess)
+                console.log("guesses left: " + guessesLeft);
+                console.log("letters guessed: " + lettersGuessed);
+                console.log("--------------------");
+        }
+    }
+
+    // [else] if the user's letter DOES match the computers letter
+    else if (userGuess === computerGuess) {
+        // increase winCount by 1
+        winCount++;
+        // reset guessesLeft
+        guessesLeft = 9;
+        // reset lettersGuessed array
+        lettersGuessed = [];
+        // generate new random letter
+        computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            // test and debug
+            console.log("WINS = " + winCount);
+            console.log("LOSS = " + lossCount);
+            console.log("new computer letter = " + computerGuess);
+            console.log("guesses left: " + guessesLeft);
+            console.log("letters guessed: " + lettersGuessed);
+            console.log("--------------------");
+    }
 }
