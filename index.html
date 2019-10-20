@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,38 +13,61 @@
 
 </head>
 
-<body style="margin-top: 10px; margin-left: 15px;">
+<body class="container text-center pt-3">
 
-<!-- GAME DISPLAY START -->
+    <div class="row">
+        <div class="col-2"></div>
 
-    <h4>Psychic Letter Game</h4>
+        <div class="col-8">
+            <!-- CARD START -->
+            <div class="card">
 
-    <p>Guess what letter I'm thinking of.</p>
+                <h5 class="card-header bg-dark text-warning">Psychic Letter Game</h5>
 
-    <p>
-    <!-- WINS and LOSSES -->
-        <h6>Wins - 
-            <span id="win-text">0</span>
-        </h6>
+                <div class="card-body bg-secondary text-light">
 
-        <h6>Loss - 
-            <span id="loss-text">0</span>
-        </h6>
+                    <h5 class="card-title"></h5>
 
-    </p>
+                    <img src="assets/images/fortune-teller.jpg" width="65%" class="mb-3" alt="E-Z as A-B-C!">
 
-    <p>
-    <!-- GUESSES LEFT and LETTERS GUESSED -->
-        <h6>Guesses Left: 
-            <span id="guessesleft-text">9</span>
-        </h6>
+                    <p class="card-text text-warning">
+                        Press any letter to 
+                    </p>
 
-        <h6>Guesses So Far: 
-            <span id="lettersguessed-text"></span>
-        </h6>
-    </p>
+                    <div class="row">
+                        <div class="col-5 text-right">
+                            <p>
+                                <!-- WINS and LOSSES -->
+                                <h6>Wins -
+                                    <span id="win-text">0</span>
+                                </h6>
 
-<!-- GAME DISPLAY END -->
+                                <h6>Loss -
+                                    <span id="loss-text">0</span>
+                                </h6>
+
+                            </p>
+                        </div>
+
+                        <div class="col-7 text-left">
+                            <p>
+                                <!-- GUESSES LEFT and LETTERS GUESSED -->
+                                <h6>Guesses Left:
+                                    <span id="guessesleft-text">9</span>
+                                </h6>
+
+                                <h6>Guesses So Far:
+                                    <span id="lettersguessed-text"></span>
+                                </h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--CARD END-->
+        </div>
+        <div class="col-2"></div>
+    </div>
 
     <!-- Game.JS link -->
     <script src="assets/javascript/game.js"></script>
@@ -58,6 +82,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    
+
 </body>
+
 </html>
