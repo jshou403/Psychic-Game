@@ -14,4 +14,8 @@
     I used Bootstrap CSS for the second time! 
 
 [Improvements]
-    This game never really ends. It goes on as long as the user feels like playing. There could be a stopping point added. Maybe even a reset button or a start button before the game begins. 
+    This game never really ends. It goes on as long as the user feels like playing. There could be a stopping point added at 10 losses or 10 wins, whichever comes first. 
+    
+    Maybe even a reset button or a start button before the game begins. 
+    
+    A space or alert to display the correct letter, if the user guesses it, would also make the game feel more whole. 
