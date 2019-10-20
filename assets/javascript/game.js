@@ -60,12 +60,12 @@ document.onkeyup = function (event) {
         computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
                 // test and debug
-                console.log("WINS - " + winCount);
-                console.log("LOSS - " + lossCount);
-                console.log("new computer letter = " + computerGuess)
-                console.log("guesses left: " + guessesLeft);
-                console.log("letters guessed: " + lettersGuessed);
-                console.log("--------------------");
+                // console.log("WINS - " + winCount);
+                // console.log("LOSS - " + lossCount);
+                // console.log("new computer letter = " + computerGuess)
+                // console.log("guesses left: " + guessesLeft);
+                // console.log("letters guessed: " + lettersGuessed);
+                // console.log("--------------------");
         }
     }
 
@@ -87,11 +87,11 @@ document.onkeyup = function (event) {
         computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
             // test and debug
-            console.log("WINS = " + winCount);
-            console.log("LOSS = " + lossCount);
-            console.log("new computer letter = " + computerGuess);
-            console.log("guesses left: " + guessesLeft);
-            console.log("letters guessed: " + lettersGuessed);
-            console.log("--------------------");
+            // console.log("WINS = " + winCount);
+            // console.log("LOSS = " + lossCount);
+            // console.log("new computer letter = " + computerGuess);
+            // console.log("guesses left: " + guessesLeft);
+            // console.log("letters guessed: " + lettersGuessed);
+            // console.log("--------------------");
     }
 }
